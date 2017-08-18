@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="00276b2268294f8d88313abc1b57159c" Name="Diagram1">
+        <EntityTypeShape EntityType="RefModel.BRON_ORG_REF" Width="1.5" PointX="5.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="RefModel.BRON_TYPE_REF" Width="1.5" PointX="7.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="RefModel.CHECK_MONTH_REF" Width="1.5" PointX="9.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="RefModel.ECOMPENS_REF" Width="1.5" PointX="10.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="RefModel.EMOTOR_REF" Width="1.5" PointX="11.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="RefModel.ENERNAGR_REF" Width="1.5" PointX="11.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="RefModel.ENERPRI_REF" Width="1.5" PointX="12.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="RefModel.FACTORKZ_REF" Width="1.5" PointX="0.75" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="RefModel.MET_ISPOL_REF" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RefModel.METER_REF" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RefModel.NALOG_REF" Width="1.5" PointX="0.75" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RefModel.NALOGZ_REF" Width="1.5" PointX="3" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RefModel.POWMAX_REF" Width="1.5" PointX="7.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RefModel.POWMAXZ_REF" Width="1.5" PointX="10" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RefModel.PRECISE_REF" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RefModel.SETI_REF" Width="1.5" PointX="5.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="RefModel.TARPOPUL_REF" Width="1.5" PointX="2.75" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="RefModel.TRANSFPOWER" Width="1.5" PointX="12.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RefModel.TYPEHOUR_REF" Width="1.5" PointX="4.75" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="RefModel.VID_EN_REF" Width="1.5" PointX="0.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RefModel.WIRE_REF" Width="1.5" PointX="5.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RefModel.WIREZ_REF" Width="1.5" PointX="8" PointY="8.25" IsExpanded="true" />
+        <AssociationConnector Association="RefModel.METER_REF_ISPOL_ID_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="RefModel.METER_PRECISE" ManuallyRouted="false" />
+        <AssociationConnector Association="RefModel.METER_REF_VID_EN_ID_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="RefModel.NALOGZ_NALOG_ID_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="RefModel.POWMAX_ID_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="RefModel.SETI_PARENT" ManuallyRouted="false" />
+        <AssociationConnector Association="RefModel.WIREZ_REF_MAT_FK" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

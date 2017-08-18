@@ -1,0 +1,1019 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище RefModel" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="10.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BRON_ORG_REF">
+          <Key>
+            <PropertyRef Name="BRON_ORG_ID" />
+          </Key>
+          <Property Name="BRON_ORG_ID" Type="number" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="BRON_ORG_NAME" Type="varchar2" MaxLength="150" Nullable="false" />
+          <Property Name="BRON_ORG_VID" Type="number" Precision="38" Scale="0" />
+          <Property Name="BRON_ORG_REM" Type="varchar2" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="BRON_TYPE_REF">
+          <Key>
+            <PropertyRef Name="BRON_TYPE_ID" />
+          </Key>
+          <Property Name="BRON_TYPE_ID" Type="number" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="BRON_TYPE_NAME" Type="varchar2" MaxLength="150" Nullable="false" />
+          <Property Name="BRON_TYPE_VID" Type="number" Precision="38" Scale="0" />
+          <Property Name="BRON_TYPE_REM" Type="varchar2" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="CHECK_MONTH_REF">
+          <Key>
+            <PropertyRef Name="CHECK_MONTH_ID" />
+          </Key>
+          <Property Name="CHECK_MONTH_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="ORD" Type="number" Precision="38" Scale="0" />
+          <Property Name="TITLE" Type="varchar2" MaxLength="200" />
+          <Property Name="CUR" Type="varchar2" MaxLength="800" />
+          <Property Name="HINT" Type="varchar2" MaxLength="400" />
+        </EntityType>
+        <EntityType Name="ECOMPENS_REF">
+          <Key>
+            <PropertyRef Name="ECOMPENS_ID" />
+          </Key>
+          <Property Name="ECOMPENS_ID" Type="number" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="ECOMPENS_NAME" Type="varchar2" MaxLength="30" Nullable="false" />
+          <Property Name="ECOMPENS_VID" Type="number" Precision="38" Scale="0" />
+          <Property Name="ECOMPENS_REM" Type="varchar2" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="EMOTOR_REF">
+          <Key>
+            <PropertyRef Name="EMOTOR_ID" />
+          </Key>
+          <Property Name="EMOTOR_ID" Type="number" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="EMOTOR_NAME" Type="varchar2" MaxLength="30" Nullable="false" />
+          <Property Name="EMOTOR_VID" Type="number" Precision="38" Scale="0" />
+          <Property Name="EMOTOR_REM" Type="varchar2" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="ENERNAGR_REF">
+          <Key>
+            <PropertyRef Name="ENERNAGR_ID" />
+          </Key>
+          <Property Name="ENERNAGR_ID" Type="number" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="ENERNAGR_NAME" Type="varchar2" MaxLength="30" Nullable="false" />
+          <Property Name="ENERNAGR_VID" Type="number" Precision="38" Scale="0" />
+          <Property Name="ENERNAGR_REM" Type="varchar2" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="ENERPRI_REF">
+          <Key>
+            <PropertyRef Name="ENERPRI_ID" />
+          </Key>
+          <Property Name="ENERPRI_ID" Type="number" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="ENERPRI_NAME" Type="varchar2" MaxLength="30" Nullable="false" />
+          <Property Name="ENERPRI_VID" Type="number" Precision="38" Scale="0" />
+          <Property Name="ENERPRI_REM" Type="varchar2" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="FACTORKZ_REF">
+          <Key>
+            <PropertyRef Name="FACTORKZ_ID" />
+          </Key>
+          <Property Name="FACTORKZ_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="POTR" Type="varchar2" MaxLength="200" />
+          <Property Name="SHIFTCOD" Type="number" Precision="38" Scale="0" />
+          <Property Name="FKZ" Type="number" Precision="38" Scale="0" />
+          <Property Name="F2" Type="number" Precision="38" Scale="0" />
+          <Property Name="F3" Type="number" Precision="38" Scale="0" />
+        </EntityType>
+        <EntityType Name="MET_ISPOL_REF">
+          <Key>
+            <PropertyRef Name="MET_ISPOL_ID" />
+          </Key>
+          <Property Name="MET_ISPOL_ID" Type="number" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="MET_ISPOL_TYPE" Type="varchar2" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="METER_REF">
+          <Key>
+            <PropertyRef Name="METER_ID" />
+          </Key>
+          <Property Name="METER_ID" Type="number" Precision="6" Scale="0" Nullable="false" />
+          <Property Name="TYP_MET" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="MET_ISPOL_ID" Type="number" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="VID_EN_ID" Type="number" Precision="1" Scale="0" />
+          <Property Name="ZN_MET" Type="number" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="ZND_MET" Type="number" Precision="2" Scale="0" />
+          <Property Name="POV_INT" Type="number" Precision="2" Scale="0" />
+          <Property Name="POV_INT1" Type="number" Precision="2" Scale="0" />
+          <Property Name="POV_INT2" Type="number" Precision="2" Scale="0" />
+          <Property Name="NAP_UCH" Type="number" Precision="1" Scale="0" />
+          <Property Name="PRECISE_ID" Type="number" Precision="38" Scale="0" />
+          <Property Name="FAZ" Type="number" Precision="1" Scale="0" />
+          <Property Name="PROMET" Type="number" Precision="1" Scale="0" />
+          <Property Name="CITEL_MET_ID" Type="number" Precision="6" Scale="0" />
+          <Property Name="CITEL_CNT" Type="number" Precision="6" Scale="0" />
+          <Property Name="PROM_MET_ID" Type="number" Precision="6" Scale="0" />
+          <Property Name="PROM_CNT" Type="number" Precision="6" Scale="0" />
+          <Property Name="REMET" Type="varchar2" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="NALOG_REF">
+          <Key>
+            <PropertyRef Name="NALOG_ID" />
+          </Key>
+          <Property Name="NALOG_ID" Type="number" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="NALOG" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="NLG" Type="varchar2" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="NALOGZ_REF">
+          <Key>
+            <PropertyRef Name="NALOG_ID" />
+            <PropertyRef Name="DNAL" />
+          </Key>
+          <Property Name="NALOG_ID" Type="number" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="DNAL" Type="date" Nullable="false" />
+          <Property Name="ZNAL" Type="number" Precision="38" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="POWMAX_REF">
+          <Key>
+            <PropertyRef Name="POWMAX_ID" />
+          </Key>
+          <Property Name="POWMAX_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="NPOWM" Type="varchar2" MaxLength="200" />
+          <Property Name="PLOW" Type="number" Precision="38" Scale="0" />
+          <Property Name="PHIGH" Type="number" Precision="38" Scale="0" />
+          <Property Name="NPOWMAX" Type="varchar2" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="POWMAXZ_REF">
+          <Key>
+            <PropertyRef Name="POWMAX_ID" />
+            <PropertyRef Name="DATPOW" />
+          </Key>
+          <Property Name="POWMAX_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="DATPOW" Type="date" Nullable="false" />
+          <Property Name="COEFTAR" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="REMPOW" Type="varchar2" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="PRECISE_REF">
+          <Key>
+            <PropertyRef Name="PRECISE_ID" />
+          </Key>
+          <Property Name="PRECISE_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="PRECISE_NAME" Type="varchar2" MaxLength="10" Nullable="false" />
+          <Property Name="PRECISE_VID" Type="number" Precision="38" Scale="0" />
+          <Property Name="PRECISE_REM" Type="varchar2" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="SETI_REF">
+          <Key>
+            <PropertyRef Name="SETI_ID" />
+          </Key>
+          <Property Name="SETI_ID" Type="number" Precision="6" Scale="0" Nullable="false" />
+          <Property Name="SETI_NAME" Type="varchar2" MaxLength="200" Nullable="false" />
+          <Property Name="SETI_ID_PARENT" Type="number" Precision="6" Scale="0" />
+          <Property Name="STATUS" Type="number" Precision="1" Scale="0" />
+          <Property Name="ATTR" Type="number" Precision="4" Scale="0" />
+          <Property Name="TYPS" Type="number" Precision="6" Scale="0" />
+          <Property Name="CONTACT" Type="varchar2" MaxLength="200" />
+          <Property Name="WWW" Type="varchar2" MaxLength="50" />
+          <Property Name="TEL" Type="varchar2" MaxLength="50" />
+          <Property Name="FAX" Type="varchar2" MaxLength="50" />
+          <Property Name="MAIL" Type="varchar2" MaxLength="100" />
+          <Property Name="ADR" Type="varchar2" MaxLength="100" />
+          <Property Name="NIFS" Type="varchar2" MaxLength="100" />
+          <Property Name="SETI_NAMES" Type="varchar2" MaxLength="200" />
+          <Property Name="REMA" Type="varchar2" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="TARPOPUL_REF">
+          <Key>
+            <PropertyRef Name="TARPOPUL_ID" />
+          </Key>
+          <Property Name="TARPOPUL_ID" Type="number" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="TARPOPUL_N" Type="varchar2" MaxLength="200" />
+          <Property Name="TARPOPUL_NA" Type="varchar2" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="TRANSFPOWER">
+          <Key>
+            <PropertyRef Name="TRANS_ID" />
+          </Key>
+          <Property Name="TRANS_ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="POWER" Type="number" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="HV" Type="number" Precision="7" Scale="3" Nullable="false" />
+          <Property Name="MV" Type="number" Precision="7" Scale="3" Nullable="false" />
+          <Property Name="LV" Type="number" Precision="7" Scale="3" Nullable="false" />
+          <Property Name="PX" Type="number" Precision="7" Scale="3" Nullable="false" />
+          <Property Name="PK" Type="number" Precision="7" Scale="3" Nullable="false" />
+          <Property Name="TYPE_TRANS" Type="varchar2" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="TYPEHOUR_REF">
+          <Key>
+            <PropertyRef Name="TYPEHOUR_ID" />
+          </Key>
+          <Property Name="TYPEHOUR_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="NAIM" Type="varchar2" MaxLength="200" />
+          <Property Name="CHOUR" Type="varchar2" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="VID_EN_REF">
+          <Key>
+            <PropertyRef Name="VID_EN_ID" />
+          </Key>
+          <Property Name="VID_EN_ID" Type="number" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="VID_EN_TYPE" Type="varchar2" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="WIRE_REF">
+          <Key>
+            <PropertyRef Name="MAT" />
+          </Key>
+          <Property Name="MAT" Type="varchar2" MaxLength="2" Nullable="false" />
+          <Property Name="MATTER" Type="varchar2" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WIREZ_REF">
+          <Key>
+            <PropertyRef Name="MAT" />
+            <PropertyRef Name="AREA" />
+          </Key>
+          <Property Name="MAT" Type="varchar2" MaxLength="2" Nullable="false" />
+          <Property Name="MARK" Type="varchar2" MaxLength="15" />
+          <Property Name="AREA" Type="number" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="RESIST" Type="number" Precision="5" Scale="3" Nullable="false" />
+        </EntityType>
+        <Association Name="METER_PRECISE">
+          <End Role="PRECISE_REF" Type="Self.PRECISE_REF" Multiplicity="0..1" />
+          <End Role="METER_REF" Type="Self.METER_REF" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRECISE_REF">
+              <PropertyRef Name="PRECISE_ID" />
+            </Principal>
+            <Dependent Role="METER_REF">
+              <PropertyRef Name="PRECISE_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="METER_REF_ISPOL_ID_FK">
+          <End Role="MET_ISPOL_REF" Type="Self.MET_ISPOL_REF" Multiplicity="1" />
+          <End Role="METER_REF" Type="Self.METER_REF" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MET_ISPOL_REF">
+              <PropertyRef Name="MET_ISPOL_ID" />
+            </Principal>
+            <Dependent Role="METER_REF">
+              <PropertyRef Name="MET_ISPOL_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="METER_REF_VID_EN_ID_FK">
+          <End Role="VID_EN_REF" Type="Self.VID_EN_REF" Multiplicity="0..1" />
+          <End Role="METER_REF" Type="Self.METER_REF" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VID_EN_REF">
+              <PropertyRef Name="VID_EN_ID" />
+            </Principal>
+            <Dependent Role="METER_REF">
+              <PropertyRef Name="VID_EN_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="NALOGZ_NALOG_ID_FK">
+          <End Role="NALOG_REF" Type="Self.NALOG_REF" Multiplicity="1" />
+          <End Role="NALOGZ_REF" Type="Self.NALOGZ_REF" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NALOG_REF">
+              <PropertyRef Name="NALOG_ID" />
+            </Principal>
+            <Dependent Role="NALOGZ_REF">
+              <PropertyRef Name="NALOG_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="POWMAX_ID_FK">
+          <End Role="POWMAX_REF" Type="Self.POWMAX_REF" Multiplicity="1" />
+          <End Role="POWMAXZ_REF" Type="Self.POWMAXZ_REF" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="POWMAX_REF">
+              <PropertyRef Name="POWMAX_ID" />
+            </Principal>
+            <Dependent Role="POWMAXZ_REF">
+              <PropertyRef Name="POWMAX_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SETI_PARENT">
+          <End Role="SETI_REF" Type="Self.SETI_REF" Multiplicity="0..1" />
+          <End Role="SETI_REF1" Type="Self.SETI_REF" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SETI_REF">
+              <PropertyRef Name="SETI_ID" />
+            </Principal>
+            <Dependent Role="SETI_REF1">
+              <PropertyRef Name="SETI_ID_PARENT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="WIREZ_REF_MAT_FK">
+          <End Role="WIRE_REF" Type="Self.WIRE_REF" Multiplicity="1" />
+          <End Role="WIREZ_REF" Type="Self.WIREZ_REF" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WIRE_REF">
+              <PropertyRef Name="MAT" />
+            </Principal>
+            <Dependent Role="WIREZ_REF">
+              <PropertyRef Name="MAT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище RefModelContainer">
+          <EntitySet Name="BRON_ORG_REF" EntityType="Self.BRON_ORG_REF" Schema="EE_REF" store:Type="Tables" />
+          <EntitySet Name="BRON_TYPE_REF" EntityType="Self.BRON_TYPE_REF" Schema="EE_REF" store:Type="Tables" />
+          <EntitySet Name="CHECK_MONTH_REF" EntityType="Self.CHECK_MONTH_REF" Schema="EE_REF" store:Type="Tables" />
+          <EntitySet Name="ECOMPENS_REF" EntityType="Self.ECOMPENS_REF" Schema="EE_REF" store:Type="Tables" />
+          <EntitySet Name="EMOTOR_REF" EntityType="Self.EMOTOR_REF" Schema="EE_REF" store:Type="Tables" />
+          <EntitySet Name="ENERNAGR_REF" EntityType="Self.ENERNAGR_REF" Schema="EE_REF" store:Type="Tables" />
+          <EntitySet Name="ENERPRI_REF" EntityType="Self.ENERPRI_REF" Schema="EE_REF" store:Type="Tables" />
+          <EntitySet Name="FACTORKZ_REF" EntityType="Self.FACTORKZ_REF" Schema="EE_REF" store:Type="Tables" />
+          <EntitySet Name="MET_ISPOL_REF" EntityType="Self.MET_ISPOL_REF" Schema="EE_REF" store:Type="Tables" />
+          <EntitySet Name="METER_REF" EntityType="Self.METER_REF" Schema="EE_REF" store:Type="Tables" />
+          <EntitySet Name="NALOG_REF" EntityType="Self.NALOG_REF" Schema="EE_REF" store:Type="Tables" />
+          <EntitySet Name="NALOGZ_REF" EntityType="Self.NALOGZ_REF" Schema="EE_REF" store:Type="Tables" />
+          <EntitySet Name="POWMAX_REF" EntityType="Self.POWMAX_REF" Schema="EE_REF" store:Type="Tables" />
+          <EntitySet Name="POWMAXZ_REF" EntityType="Self.POWMAXZ_REF" Schema="EE_REF" store:Type="Tables" />
+          <EntitySet Name="PRECISE_REF" EntityType="Self.PRECISE_REF" Schema="EE_REF" store:Type="Tables" />
+          <EntitySet Name="SETI_REF" EntityType="Self.SETI_REF" Schema="EE_REF" store:Type="Tables" />
+          <EntitySet Name="TARPOPUL_REF" EntityType="Self.TARPOPUL_REF" Schema="EE_REF" store:Type="Tables" />
+          <EntitySet Name="TRANSFPOWER" EntityType="Self.TRANSFPOWER" Schema="EE_REF" store:Type="Tables" />
+          <EntitySet Name="TYPEHOUR_REF" EntityType="Self.TYPEHOUR_REF" Schema="EE_REF" store:Type="Tables" />
+          <EntitySet Name="VID_EN_REF" EntityType="Self.VID_EN_REF" Schema="EE_REF" store:Type="Tables" />
+          <EntitySet Name="WIRE_REF" EntityType="Self.WIRE_REF" Schema="EE_REF" store:Type="Tables" />
+          <EntitySet Name="WIREZ_REF" EntityType="Self.WIREZ_REF" Schema="EE_REF" store:Type="Tables" />
+          <AssociationSet Name="METER_PRECISE" Association="Self.METER_PRECISE">
+            <End Role="PRECISE_REF" EntitySet="PRECISE_REF" />
+            <End Role="METER_REF" EntitySet="METER_REF" />
+          </AssociationSet>
+          <AssociationSet Name="METER_REF_ISPOL_ID_FK" Association="Self.METER_REF_ISPOL_ID_FK">
+            <End Role="MET_ISPOL_REF" EntitySet="MET_ISPOL_REF" />
+            <End Role="METER_REF" EntitySet="METER_REF" />
+          </AssociationSet>
+          <AssociationSet Name="METER_REF_VID_EN_ID_FK" Association="Self.METER_REF_VID_EN_ID_FK">
+            <End Role="VID_EN_REF" EntitySet="VID_EN_REF" />
+            <End Role="METER_REF" EntitySet="METER_REF" />
+          </AssociationSet>
+          <AssociationSet Name="NALOGZ_NALOG_ID_FK" Association="Self.NALOGZ_NALOG_ID_FK">
+            <End Role="NALOG_REF" EntitySet="NALOG_REF" />
+            <End Role="NALOGZ_REF" EntitySet="NALOGZ_REF" />
+          </AssociationSet>
+          <AssociationSet Name="POWMAX_ID_FK" Association="Self.POWMAX_ID_FK">
+            <End Role="POWMAX_REF" EntitySet="POWMAX_REF" />
+            <End Role="POWMAXZ_REF" EntitySet="POWMAXZ_REF" />
+          </AssociationSet>
+          <AssociationSet Name="SETI_PARENT" Association="Self.SETI_PARENT">
+            <End Role="SETI_REF" EntitySet="SETI_REF" />
+            <End Role="SETI_REF1" EntitySet="SETI_REF" />
+          </AssociationSet>
+          <AssociationSet Name="WIREZ_REF_MAT_FK" Association="Self.WIREZ_REF_MAT_FK">
+            <End Role="WIRE_REF" EntitySet="WIRE_REF" />
+            <End Role="WIREZ_REF" EntitySet="WIREZ_REF" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RefModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="BRON_ORG_REF">
+          <Key>
+            <PropertyRef Name="BRON_ORG_ID" />
+          </Key>
+          <Property Name="BRON_ORG_ID" Type="Int16" Nullable="false" />
+          <Property Name="BRON_ORG_NAME" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BRON_ORG_VID" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="BRON_ORG_REM" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="BRON_TYPE_REF">
+          <Key>
+            <PropertyRef Name="BRON_TYPE_ID" />
+          </Key>
+          <Property Name="BRON_TYPE_ID" Type="Int16" Nullable="false" />
+          <Property Name="BRON_TYPE_NAME" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BRON_TYPE_VID" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="BRON_TYPE_REM" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="CHECK_MONTH_REF">
+          <Key>
+            <PropertyRef Name="CHECK_MONTH_ID" />
+          </Key>
+          <Property Name="CHECK_MONTH_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="ORD" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="TITLE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="CUR" Type="String" MaxLength="800" FixedLength="false" Unicode="false" />
+          <Property Name="HINT" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ECOMPENS_REF">
+          <Key>
+            <PropertyRef Name="ECOMPENS_ID" />
+          </Key>
+          <Property Name="ECOMPENS_ID" Type="Int16" Nullable="false" />
+          <Property Name="ECOMPENS_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ECOMPENS_VID" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="ECOMPENS_REM" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="EMOTOR_REF">
+          <Key>
+            <PropertyRef Name="EMOTOR_ID" />
+          </Key>
+          <Property Name="EMOTOR_ID" Type="Int16" Nullable="false" />
+          <Property Name="EMOTOR_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EMOTOR_VID" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="EMOTOR_REM" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ENERNAGR_REF">
+          <Key>
+            <PropertyRef Name="ENERNAGR_ID" />
+          </Key>
+          <Property Name="ENERNAGR_ID" Type="Int16" Nullable="false" />
+          <Property Name="ENERNAGR_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ENERNAGR_VID" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="ENERNAGR_REM" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ENERPRI_REF">
+          <Key>
+            <PropertyRef Name="ENERPRI_ID" />
+          </Key>
+          <Property Name="ENERPRI_ID" Type="Int16" Nullable="false" />
+          <Property Name="ENERPRI_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ENERPRI_VID" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="ENERPRI_REM" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="FACTORKZ_REF">
+          <Key>
+            <PropertyRef Name="FACTORKZ_ID" />
+          </Key>
+          <Property Name="FACTORKZ_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="POTR" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SHIFTCOD" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="FKZ" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="F2" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="F3" Type="Decimal" Precision="38" Scale="0" />
+        </EntityType>
+        <EntityType Name="MET_ISPOL_REF">
+          <Key>
+            <PropertyRef Name="MET_ISPOL_ID" />
+          </Key>
+          <Property Name="MET_ISPOL_ID" Type="Int16" Nullable="false" />
+          <Property Name="MET_ISPOL_TYPE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="METER_REF" Relationship="Self.METER_REF_ISPOL_ID_FK" FromRole="MET_ISPOL_REF" ToRole="METER_REF" />
+        </EntityType>
+        <EntityType Name="METER_REF">
+          <Key>
+            <PropertyRef Name="METER_ID" />
+          </Key>
+          <Property Name="METER_ID" Type="Int32" Nullable="false" />
+          <Property Name="TYP_MET" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MET_ISPOL_ID" Type="Int16" Nullable="false" />
+          <Property Name="VID_EN_ID" Type="Int16" />
+          <Property Name="ZN_MET" Type="Int16" Nullable="false" />
+          <Property Name="ZND_MET" Type="Int16" />
+          <Property Name="POV_INT" Type="Int16" />
+          <Property Name="POV_INT1" Type="Int16" />
+          <Property Name="POV_INT2" Type="Int16" />
+          <Property Name="NAP_UCH" Type="Int16" />
+          <Property Name="PRECISE_ID" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="FAZ" Type="Int16" />
+          <Property Name="PROMET" Type="Int16" />
+          <Property Name="CITEL_MET_ID" Type="Int32" />
+          <Property Name="CITEL_CNT" Type="Int32" />
+          <Property Name="PROM_MET_ID" Type="Int32" />
+          <Property Name="PROM_CNT" Type="Int32" />
+          <Property Name="REMET" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="MET_ISPOL_REF" Relationship="Self.METER_REF_ISPOL_ID_FK" FromRole="METER_REF" ToRole="MET_ISPOL_REF" />
+          <NavigationProperty Name="PRECISE_REF" Relationship="Self.METER_PRECISE" FromRole="METER_REF" ToRole="PRECISE_REF" />
+          <NavigationProperty Name="VID_EN_REF" Relationship="Self.METER_REF_VID_EN_ID_FK" FromRole="METER_REF" ToRole="VID_EN_REF" />
+        </EntityType>
+        <EntityType Name="NALOG_REF">
+          <Key>
+            <PropertyRef Name="NALOG_ID" />
+          </Key>
+          <Property Name="NALOG_ID" Type="Int16" Nullable="false" />
+          <Property Name="NALOG" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NLG" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="NALOGZ_REF" Relationship="Self.NALOGZ_NALOG_ID_FK" FromRole="NALOG_REF" ToRole="NALOGZ_REF" />
+        </EntityType>
+        <EntityType Name="NALOGZ_REF">
+          <Key>
+            <PropertyRef Name="NALOG_ID" />
+            <PropertyRef Name="DNAL" />
+          </Key>
+          <Property Name="NALOG_ID" Type="Int16" Nullable="false" />
+          <Property Name="DNAL" Type="DateTime" Nullable="false" />
+          <Property Name="ZNAL" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <NavigationProperty Name="NALOG_REF" Relationship="Self.NALOGZ_NALOG_ID_FK" FromRole="NALOGZ_REF" ToRole="NALOG_REF" />
+        </EntityType>
+        <EntityType Name="POWMAX_REF">
+          <Key>
+            <PropertyRef Name="POWMAX_ID" />
+          </Key>
+          <Property Name="POWMAX_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="NPOWM" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="PLOW" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="PHIGH" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="NPOWMAX" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="POWMAXZ_REF" Relationship="Self.POWMAX_ID_FK" FromRole="POWMAX_REF" ToRole="POWMAXZ_REF" />
+        </EntityType>
+        <EntityType Name="POWMAXZ_REF">
+          <Key>
+            <PropertyRef Name="POWMAX_ID" />
+            <PropertyRef Name="DATPOW" />
+          </Key>
+          <Property Name="POWMAX_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="DATPOW" Type="DateTime" Nullable="false" />
+          <Property Name="COEFTAR" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="REMPOW" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="POWMAX_REF" Relationship="Self.POWMAX_ID_FK" FromRole="POWMAXZ_REF" ToRole="POWMAX_REF" />
+        </EntityType>
+        <EntityType Name="PRECISE_REF">
+          <Key>
+            <PropertyRef Name="PRECISE_ID" />
+          </Key>
+          <Property Name="PRECISE_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="PRECISE_NAME" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PRECISE_VID" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="PRECISE_REM" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="METER_REF" Relationship="Self.METER_PRECISE" FromRole="PRECISE_REF" ToRole="METER_REF" />
+        </EntityType>
+        <EntityType Name="SETI_REF">
+          <Key>
+            <PropertyRef Name="SETI_ID" />
+          </Key>
+          <Property Name="SETI_ID" Type="Int32" Nullable="false" />
+          <Property Name="SETI_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SETI_ID_PARENT" Type="Int32" />
+          <Property Name="STATUS" Type="Int16" />
+          <Property Name="ATTR" Type="Int16" />
+          <Property Name="TYPS" Type="Int32" />
+          <Property Name="CONTACT" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="WWW" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TEL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FAX" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ADR" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NIFS" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SETI_NAMES" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="REMA" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="SETI_REF1" Relationship="Self.SETI_PARENT" FromRole="SETI_REF" ToRole="SETI_REF1" />
+          <NavigationProperty Name="SETI_REF2" Relationship="Self.SETI_PARENT" FromRole="SETI_REF1" ToRole="SETI_REF" />
+        </EntityType>
+        <EntityType Name="TARPOPUL_REF">
+          <Key>
+            <PropertyRef Name="TARPOPUL_ID" />
+          </Key>
+          <Property Name="TARPOPUL_ID" Type="Int16" Nullable="false" />
+          <Property Name="TARPOPUL_N" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="TARPOPUL_NA" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TRANSFPOWER">
+          <Key>
+            <PropertyRef Name="TRANS_ID" />
+          </Key>
+          <Property Name="TRANS_ID" Type="Int32" Nullable="false" />
+          <Property Name="POWER" Type="Int32" Nullable="false" />
+          <Property Name="HV" Type="Decimal" Precision="7" Scale="3" Nullable="false" />
+          <Property Name="MV" Type="Decimal" Precision="7" Scale="3" Nullable="false" />
+          <Property Name="LV" Type="Decimal" Precision="7" Scale="3" Nullable="false" />
+          <Property Name="PX" Type="Decimal" Precision="7" Scale="3" Nullable="false" />
+          <Property Name="PK" Type="Decimal" Precision="7" Scale="3" Nullable="false" />
+          <Property Name="TYPE_TRANS" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TYPEHOUR_REF">
+          <Key>
+            <PropertyRef Name="TYPEHOUR_ID" />
+          </Key>
+          <Property Name="TYPEHOUR_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="NAIM" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="CHOUR" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="VID_EN_REF">
+          <Key>
+            <PropertyRef Name="VID_EN_ID" />
+          </Key>
+          <Property Name="VID_EN_ID" Type="Int16" Nullable="false" />
+          <Property Name="VID_EN_TYPE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="METER_REF" Relationship="Self.METER_REF_VID_EN_ID_FK" FromRole="VID_EN_REF" ToRole="METER_REF" />
+        </EntityType>
+        <EntityType Name="WIRE_REF">
+          <Key>
+            <PropertyRef Name="MAT" />
+          </Key>
+          <Property Name="MAT" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MATTER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="WIREZ_REF" Relationship="Self.WIREZ_REF_MAT_FK" FromRole="WIRE_REF" ToRole="WIREZ_REF" />
+        </EntityType>
+        <EntityType Name="WIREZ_REF">
+          <Key>
+            <PropertyRef Name="MAT" />
+            <PropertyRef Name="AREA" />
+          </Key>
+          <Property Name="MAT" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MARK" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="AREA" Type="Int16" Nullable="false" />
+          <Property Name="RESIST" Type="Decimal" Precision="5" Scale="3" Nullable="false" />
+          <NavigationProperty Name="WIRE_REF" Relationship="Self.WIREZ_REF_MAT_FK" FromRole="WIREZ_REF" ToRole="WIRE_REF" />
+        </EntityType>
+        <Association Name="METER_REF_ISPOL_ID_FK">
+          <End Role="MET_ISPOL_REF" Type="Self.MET_ISPOL_REF" Multiplicity="1" />
+          <End Role="METER_REF" Type="Self.METER_REF" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MET_ISPOL_REF">
+              <PropertyRef Name="MET_ISPOL_ID" />
+            </Principal>
+            <Dependent Role="METER_REF">
+              <PropertyRef Name="MET_ISPOL_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="METER_PRECISE">
+          <End Role="PRECISE_REF" Type="Self.PRECISE_REF" Multiplicity="0..1" />
+          <End Role="METER_REF" Type="Self.METER_REF" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRECISE_REF">
+              <PropertyRef Name="PRECISE_ID" />
+            </Principal>
+            <Dependent Role="METER_REF">
+              <PropertyRef Name="PRECISE_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="METER_REF_VID_EN_ID_FK">
+          <End Role="VID_EN_REF" Type="Self.VID_EN_REF" Multiplicity="0..1" />
+          <End Role="METER_REF" Type="Self.METER_REF" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VID_EN_REF">
+              <PropertyRef Name="VID_EN_ID" />
+            </Principal>
+            <Dependent Role="METER_REF">
+              <PropertyRef Name="VID_EN_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="NALOGZ_NALOG_ID_FK">
+          <End Role="NALOG_REF" Type="Self.NALOG_REF" Multiplicity="1" />
+          <End Role="NALOGZ_REF" Type="Self.NALOGZ_REF" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NALOG_REF">
+              <PropertyRef Name="NALOG_ID" />
+            </Principal>
+            <Dependent Role="NALOGZ_REF">
+              <PropertyRef Name="NALOG_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="POWMAX_ID_FK">
+          <End Role="POWMAX_REF" Type="Self.POWMAX_REF" Multiplicity="1" />
+          <End Role="POWMAXZ_REF" Type="Self.POWMAXZ_REF" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="POWMAX_REF">
+              <PropertyRef Name="POWMAX_ID" />
+            </Principal>
+            <Dependent Role="POWMAXZ_REF">
+              <PropertyRef Name="POWMAX_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SETI_PARENT">
+          <End Role="SETI_REF" Type="Self.SETI_REF" Multiplicity="0..1" />
+          <End Role="SETI_REF1" Type="Self.SETI_REF" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SETI_REF">
+              <PropertyRef Name="SETI_ID" />
+            </Principal>
+            <Dependent Role="SETI_REF1">
+              <PropertyRef Name="SETI_ID_PARENT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="WIREZ_REF_MAT_FK">
+          <End Role="WIRE_REF" Type="Self.WIRE_REF" Multiplicity="1" />
+          <End Role="WIREZ_REF" Type="Self.WIREZ_REF" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WIRE_REF">
+              <PropertyRef Name="MAT" />
+            </Principal>
+            <Dependent Role="WIREZ_REF">
+              <PropertyRef Name="MAT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="RefEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BRON_ORG_REF" EntityType="Self.BRON_ORG_REF" />
+          <EntitySet Name="BRON_TYPE_REF" EntityType="Self.BRON_TYPE_REF" />
+          <EntitySet Name="CHECK_MONTH_REF" EntityType="Self.CHECK_MONTH_REF" />
+          <EntitySet Name="ECOMPENS_REF" EntityType="Self.ECOMPENS_REF" />
+          <EntitySet Name="EMOTOR_REF" EntityType="Self.EMOTOR_REF" />
+          <EntitySet Name="ENERNAGR_REF" EntityType="Self.ENERNAGR_REF" />
+          <EntitySet Name="ENERPRI_REF" EntityType="Self.ENERPRI_REF" />
+          <EntitySet Name="FACTORKZ_REF" EntityType="Self.FACTORKZ_REF" />
+          <EntitySet Name="MET_ISPOL_REF" EntityType="Self.MET_ISPOL_REF" />
+          <EntitySet Name="METER_REF" EntityType="Self.METER_REF" />
+          <EntitySet Name="NALOG_REF" EntityType="Self.NALOG_REF" />
+          <EntitySet Name="NALOGZ_REF" EntityType="Self.NALOGZ_REF" />
+          <EntitySet Name="POWMAX_REF" EntityType="Self.POWMAX_REF" />
+          <EntitySet Name="POWMAXZ_REF" EntityType="Self.POWMAXZ_REF" />
+          <EntitySet Name="PRECISE_REF" EntityType="Self.PRECISE_REF" />
+          <EntitySet Name="SETI_REF" EntityType="Self.SETI_REF" />
+          <EntitySet Name="TARPOPUL_REF" EntityType="Self.TARPOPUL_REF" />
+          <EntitySet Name="TRANSFPOWER" EntityType="Self.TRANSFPOWER" />
+          <EntitySet Name="TYPEHOUR_REF" EntityType="Self.TYPEHOUR_REF" />
+          <EntitySet Name="VID_EN_REF" EntityType="Self.VID_EN_REF" />
+          <EntitySet Name="WIRE_REF" EntityType="Self.WIRE_REF" />
+          <EntitySet Name="WIREZ_REF" EntityType="Self.WIREZ_REF" />
+          <AssociationSet Name="METER_REF_ISPOL_ID_FK" Association="Self.METER_REF_ISPOL_ID_FK">
+            <End Role="MET_ISPOL_REF" EntitySet="MET_ISPOL_REF" />
+            <End Role="METER_REF" EntitySet="METER_REF" />
+          </AssociationSet>
+          <AssociationSet Name="METER_PRECISE" Association="Self.METER_PRECISE">
+            <End Role="PRECISE_REF" EntitySet="PRECISE_REF" />
+            <End Role="METER_REF" EntitySet="METER_REF" />
+          </AssociationSet>
+          <AssociationSet Name="METER_REF_VID_EN_ID_FK" Association="Self.METER_REF_VID_EN_ID_FK">
+            <End Role="VID_EN_REF" EntitySet="VID_EN_REF" />
+            <End Role="METER_REF" EntitySet="METER_REF" />
+          </AssociationSet>
+          <AssociationSet Name="NALOGZ_NALOG_ID_FK" Association="Self.NALOGZ_NALOG_ID_FK">
+            <End Role="NALOG_REF" EntitySet="NALOG_REF" />
+            <End Role="NALOGZ_REF" EntitySet="NALOGZ_REF" />
+          </AssociationSet>
+          <AssociationSet Name="POWMAX_ID_FK" Association="Self.POWMAX_ID_FK">
+            <End Role="POWMAX_REF" EntitySet="POWMAX_REF" />
+            <End Role="POWMAXZ_REF" EntitySet="POWMAXZ_REF" />
+          </AssociationSet>
+          <AssociationSet Name="SETI_PARENT" Association="Self.SETI_PARENT">
+            <End Role="SETI_REF" EntitySet="SETI_REF" />
+            <End Role="SETI_REF1" EntitySet="SETI_REF" />
+          </AssociationSet>
+          <AssociationSet Name="WIREZ_REF_MAT_FK" Association="Self.WIREZ_REF_MAT_FK">
+            <End Role="WIRE_REF" EntitySet="WIRE_REF" />
+            <End Role="WIREZ_REF" EntitySet="WIREZ_REF" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище RefModelContainer" CdmEntityContainer="RefEntities">
+          <EntitySetMapping Name="BRON_ORG_REF">
+            <EntityTypeMapping TypeName="RefModel.BRON_ORG_REF">
+              <MappingFragment StoreEntitySet="BRON_ORG_REF">
+                <ScalarProperty Name="BRON_ORG_ID" ColumnName="BRON_ORG_ID" />
+                <ScalarProperty Name="BRON_ORG_NAME" ColumnName="BRON_ORG_NAME" />
+                <ScalarProperty Name="BRON_ORG_VID" ColumnName="BRON_ORG_VID" />
+                <ScalarProperty Name="BRON_ORG_REM" ColumnName="BRON_ORG_REM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BRON_TYPE_REF">
+            <EntityTypeMapping TypeName="RefModel.BRON_TYPE_REF">
+              <MappingFragment StoreEntitySet="BRON_TYPE_REF">
+                <ScalarProperty Name="BRON_TYPE_ID" ColumnName="BRON_TYPE_ID" />
+                <ScalarProperty Name="BRON_TYPE_NAME" ColumnName="BRON_TYPE_NAME" />
+                <ScalarProperty Name="BRON_TYPE_VID" ColumnName="BRON_TYPE_VID" />
+                <ScalarProperty Name="BRON_TYPE_REM" ColumnName="BRON_TYPE_REM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CHECK_MONTH_REF">
+            <EntityTypeMapping TypeName="RefModel.CHECK_MONTH_REF">
+              <MappingFragment StoreEntitySet="CHECK_MONTH_REF">
+                <ScalarProperty Name="CHECK_MONTH_ID" ColumnName="CHECK_MONTH_ID" />
+                <ScalarProperty Name="ORD" ColumnName="ORD" />
+                <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+                <ScalarProperty Name="CUR" ColumnName="CUR" />
+                <ScalarProperty Name="HINT" ColumnName="HINT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ECOMPENS_REF">
+            <EntityTypeMapping TypeName="RefModel.ECOMPENS_REF">
+              <MappingFragment StoreEntitySet="ECOMPENS_REF">
+                <ScalarProperty Name="ECOMPENS_ID" ColumnName="ECOMPENS_ID" />
+                <ScalarProperty Name="ECOMPENS_NAME" ColumnName="ECOMPENS_NAME" />
+                <ScalarProperty Name="ECOMPENS_VID" ColumnName="ECOMPENS_VID" />
+                <ScalarProperty Name="ECOMPENS_REM" ColumnName="ECOMPENS_REM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EMOTOR_REF">
+            <EntityTypeMapping TypeName="RefModel.EMOTOR_REF">
+              <MappingFragment StoreEntitySet="EMOTOR_REF">
+                <ScalarProperty Name="EMOTOR_ID" ColumnName="EMOTOR_ID" />
+                <ScalarProperty Name="EMOTOR_NAME" ColumnName="EMOTOR_NAME" />
+                <ScalarProperty Name="EMOTOR_VID" ColumnName="EMOTOR_VID" />
+                <ScalarProperty Name="EMOTOR_REM" ColumnName="EMOTOR_REM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ENERNAGR_REF">
+            <EntityTypeMapping TypeName="RefModel.ENERNAGR_REF">
+              <MappingFragment StoreEntitySet="ENERNAGR_REF">
+                <ScalarProperty Name="ENERNAGR_ID" ColumnName="ENERNAGR_ID" />
+                <ScalarProperty Name="ENERNAGR_NAME" ColumnName="ENERNAGR_NAME" />
+                <ScalarProperty Name="ENERNAGR_VID" ColumnName="ENERNAGR_VID" />
+                <ScalarProperty Name="ENERNAGR_REM" ColumnName="ENERNAGR_REM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ENERPRI_REF">
+            <EntityTypeMapping TypeName="RefModel.ENERPRI_REF">
+              <MappingFragment StoreEntitySet="ENERPRI_REF">
+                <ScalarProperty Name="ENERPRI_ID" ColumnName="ENERPRI_ID" />
+                <ScalarProperty Name="ENERPRI_NAME" ColumnName="ENERPRI_NAME" />
+                <ScalarProperty Name="ENERPRI_VID" ColumnName="ENERPRI_VID" />
+                <ScalarProperty Name="ENERPRI_REM" ColumnName="ENERPRI_REM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FACTORKZ_REF">
+            <EntityTypeMapping TypeName="RefModel.FACTORKZ_REF">
+              <MappingFragment StoreEntitySet="FACTORKZ_REF">
+                <ScalarProperty Name="FACTORKZ_ID" ColumnName="FACTORKZ_ID" />
+                <ScalarProperty Name="POTR" ColumnName="POTR" />
+                <ScalarProperty Name="SHIFTCOD" ColumnName="SHIFTCOD" />
+                <ScalarProperty Name="FKZ" ColumnName="FKZ" />
+                <ScalarProperty Name="F2" ColumnName="F2" />
+                <ScalarProperty Name="F3" ColumnName="F3" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MET_ISPOL_REF">
+            <EntityTypeMapping TypeName="RefModel.MET_ISPOL_REF">
+              <MappingFragment StoreEntitySet="MET_ISPOL_REF">
+                <ScalarProperty Name="MET_ISPOL_ID" ColumnName="MET_ISPOL_ID" />
+                <ScalarProperty Name="MET_ISPOL_TYPE" ColumnName="MET_ISPOL_TYPE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="METER_REF">
+            <EntityTypeMapping TypeName="RefModel.METER_REF">
+              <MappingFragment StoreEntitySet="METER_REF">
+                <ScalarProperty Name="METER_ID" ColumnName="METER_ID" />
+                <ScalarProperty Name="TYP_MET" ColumnName="TYP_MET" />
+                <ScalarProperty Name="MET_ISPOL_ID" ColumnName="MET_ISPOL_ID" />
+                <ScalarProperty Name="VID_EN_ID" ColumnName="VID_EN_ID" />
+                <ScalarProperty Name="ZN_MET" ColumnName="ZN_MET" />
+                <ScalarProperty Name="ZND_MET" ColumnName="ZND_MET" />
+                <ScalarProperty Name="POV_INT" ColumnName="POV_INT" />
+                <ScalarProperty Name="POV_INT1" ColumnName="POV_INT1" />
+                <ScalarProperty Name="POV_INT2" ColumnName="POV_INT2" />
+                <ScalarProperty Name="NAP_UCH" ColumnName="NAP_UCH" />
+                <ScalarProperty Name="PRECISE_ID" ColumnName="PRECISE_ID" />
+                <ScalarProperty Name="FAZ" ColumnName="FAZ" />
+                <ScalarProperty Name="PROMET" ColumnName="PROMET" />
+                <ScalarProperty Name="CITEL_MET_ID" ColumnName="CITEL_MET_ID" />
+                <ScalarProperty Name="CITEL_CNT" ColumnName="CITEL_CNT" />
+                <ScalarProperty Name="PROM_MET_ID" ColumnName="PROM_MET_ID" />
+                <ScalarProperty Name="PROM_CNT" ColumnName="PROM_CNT" />
+                <ScalarProperty Name="REMET" ColumnName="REMET" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NALOG_REF">
+            <EntityTypeMapping TypeName="RefModel.NALOG_REF">
+              <MappingFragment StoreEntitySet="NALOG_REF">
+                <ScalarProperty Name="NALOG_ID" ColumnName="NALOG_ID" />
+                <ScalarProperty Name="NALOG" ColumnName="NALOG" />
+                <ScalarProperty Name="NLG" ColumnName="NLG" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NALOGZ_REF">
+            <EntityTypeMapping TypeName="RefModel.NALOGZ_REF">
+              <MappingFragment StoreEntitySet="NALOGZ_REF">
+                <ScalarProperty Name="NALOG_ID" ColumnName="NALOG_ID" />
+                <ScalarProperty Name="DNAL" ColumnName="DNAL" />
+                <ScalarProperty Name="ZNAL" ColumnName="ZNAL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="POWMAX_REF">
+            <EntityTypeMapping TypeName="RefModel.POWMAX_REF">
+              <MappingFragment StoreEntitySet="POWMAX_REF">
+                <ScalarProperty Name="POWMAX_ID" ColumnName="POWMAX_ID" />
+                <ScalarProperty Name="NPOWM" ColumnName="NPOWM" />
+                <ScalarProperty Name="PLOW" ColumnName="PLOW" />
+                <ScalarProperty Name="PHIGH" ColumnName="PHIGH" />
+                <ScalarProperty Name="NPOWMAX" ColumnName="NPOWMAX" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="POWMAXZ_REF">
+            <EntityTypeMapping TypeName="RefModel.POWMAXZ_REF">
+              <MappingFragment StoreEntitySet="POWMAXZ_REF">
+                <ScalarProperty Name="POWMAX_ID" ColumnName="POWMAX_ID" />
+                <ScalarProperty Name="DATPOW" ColumnName="DATPOW" />
+                <ScalarProperty Name="COEFTAR" ColumnName="COEFTAR" />
+                <ScalarProperty Name="REMPOW" ColumnName="REMPOW" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PRECISE_REF">
+            <EntityTypeMapping TypeName="RefModel.PRECISE_REF">
+              <MappingFragment StoreEntitySet="PRECISE_REF">
+                <ScalarProperty Name="PRECISE_ID" ColumnName="PRECISE_ID" />
+                <ScalarProperty Name="PRECISE_NAME" ColumnName="PRECISE_NAME" />
+                <ScalarProperty Name="PRECISE_VID" ColumnName="PRECISE_VID" />
+                <ScalarProperty Name="PRECISE_REM" ColumnName="PRECISE_REM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SETI_REF">
+            <EntityTypeMapping TypeName="RefModel.SETI_REF">
+              <MappingFragment StoreEntitySet="SETI_REF">
+                <ScalarProperty Name="SETI_ID" ColumnName="SETI_ID" />
+                <ScalarProperty Name="SETI_NAME" ColumnName="SETI_NAME" />
+                <ScalarProperty Name="SETI_ID_PARENT" ColumnName="SETI_ID_PARENT" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="ATTR" ColumnName="ATTR" />
+                <ScalarProperty Name="TYPS" ColumnName="TYPS" />
+                <ScalarProperty Name="CONTACT" ColumnName="CONTACT" />
+                <ScalarProperty Name="WWW" ColumnName="WWW" />
+                <ScalarProperty Name="TEL" ColumnName="TEL" />
+                <ScalarProperty Name="FAX" ColumnName="FAX" />
+                <ScalarProperty Name="MAIL" ColumnName="MAIL" />
+                <ScalarProperty Name="ADR" ColumnName="ADR" />
+                <ScalarProperty Name="NIFS" ColumnName="NIFS" />
+                <ScalarProperty Name="SETI_NAMES" ColumnName="SETI_NAMES" />
+                <ScalarProperty Name="REMA" ColumnName="REMA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TARPOPUL_REF">
+            <EntityTypeMapping TypeName="RefModel.TARPOPUL_REF">
+              <MappingFragment StoreEntitySet="TARPOPUL_REF">
+                <ScalarProperty Name="TARPOPUL_ID" ColumnName="TARPOPUL_ID" />
+                <ScalarProperty Name="TARPOPUL_N" ColumnName="TARPOPUL_N" />
+                <ScalarProperty Name="TARPOPUL_NA" ColumnName="TARPOPUL_NA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TRANSFPOWER">
+            <EntityTypeMapping TypeName="RefModel.TRANSFPOWER">
+              <MappingFragment StoreEntitySet="TRANSFPOWER">
+                <ScalarProperty Name="TRANS_ID" ColumnName="TRANS_ID" />
+                <ScalarProperty Name="POWER" ColumnName="POWER" />
+                <ScalarProperty Name="HV" ColumnName="HV" />
+                <ScalarProperty Name="MV" ColumnName="MV" />
+                <ScalarProperty Name="LV" ColumnName="LV" />
+                <ScalarProperty Name="PX" ColumnName="PX" />
+                <ScalarProperty Name="PK" ColumnName="PK" />
+                <ScalarProperty Name="TYPE_TRANS" ColumnName="TYPE_TRANS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TYPEHOUR_REF">
+            <EntityTypeMapping TypeName="RefModel.TYPEHOUR_REF">
+              <MappingFragment StoreEntitySet="TYPEHOUR_REF">
+                <ScalarProperty Name="TYPEHOUR_ID" ColumnName="TYPEHOUR_ID" />
+                <ScalarProperty Name="NAIM" ColumnName="NAIM" />
+                <ScalarProperty Name="CHOUR" ColumnName="CHOUR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VID_EN_REF">
+            <EntityTypeMapping TypeName="RefModel.VID_EN_REF">
+              <MappingFragment StoreEntitySet="VID_EN_REF">
+                <ScalarProperty Name="VID_EN_ID" ColumnName="VID_EN_ID" />
+                <ScalarProperty Name="VID_EN_TYPE" ColumnName="VID_EN_TYPE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WIRE_REF">
+            <EntityTypeMapping TypeName="RefModel.WIRE_REF">
+              <MappingFragment StoreEntitySet="WIRE_REF">
+                <ScalarProperty Name="MAT" ColumnName="MAT" />
+                <ScalarProperty Name="MATTER" ColumnName="MATTER" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WIREZ_REF">
+            <EntityTypeMapping TypeName="RefModel.WIREZ_REF">
+              <MappingFragment StoreEntitySet="WIREZ_REF">
+                <ScalarProperty Name="MAT" ColumnName="MAT" />
+                <ScalarProperty Name="MARK" ColumnName="MARK" />
+                <ScalarProperty Name="AREA" ColumnName="AREA" />
+                <ScalarProperty Name="RESIST" ColumnName="RESIST" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

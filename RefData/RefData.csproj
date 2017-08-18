@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2A795FB9-37B2-4AD8-8546-57BBA711A6BF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RefData</RootNamespace>
+    <AssemblyName>RefData</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BRON_ORG_REF.cs">
+      <DependentUpon>RefModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BRON_TYPE_REF.cs">
+      <DependentUpon>RefModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CHECK_MONTH_REF.cs">
+      <DependentUpon>RefModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ECOMPENS_REF.cs">
+      <DependentUpon>RefModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EMOTOR_REF.cs">
+      <DependentUpon>RefModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENERNAGR_REF.cs">
+      <DependentUpon>RefModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENERPRI_REF.cs">
+      <DependentUpon>RefModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FACTORKZ_REF.cs">
+      <DependentUpon>RefModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="METER_REF.cs">
+      <DependentUpon>RefModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MET_ISPOL_REF.cs">
+      <DependentUpon>RefModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BaseRefModel.cs" />
+    <Compile Include="NALOGZ_REF.cs">
+      <DependentUpon>RefModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NALOG_REF.cs">
+      <DependentUpon>RefModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="POWMAXZ_REF.cs">
+      <DependentUpon>RefModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="POWMAX_REF.cs">
+      <DependentUpon>RefModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PRECISE_REF.cs">
+      <DependentUpon>RefModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RefModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RefModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RefModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RefModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RefModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RefModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="SETI_REF.cs">
+      <DependentUpon>RefModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TARPOPUL_REF.cs">
+      <DependentUpon>RefModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRANSFPOWER.cs">
+      <DependentUpon>RefModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TYPEHOUR_REF.cs">
+      <DependentUpon>RefModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VID_EN_REF.cs">
+      <DependentUpon>RefModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WIREZ_REF.cs">
+      <DependentUpon>RefModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WIRE_REF.cs">
+      <DependentUpon>RefModel.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="RefModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RefModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
+    <None Include="RefModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RefModel.edmx</DependentUpon>
+      <LastGenOutput>RefModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="RefModel.edmx.diagram">
+      <DependentUpon>RefModel.edmx</DependentUpon>
+    </None>
+    <None Include="RefModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RefModel.edmx</DependentUpon>
+      <LastGenOutput>RefModel.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
